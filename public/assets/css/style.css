@@ -1,0 +1,39 @@
+html, body {
+    height: 100%;
+}
+
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.jumbotron {
+    background: url(../images/news-tv-studio-set-145-virtual-green-screen-background-loop_hp1vstgl__F0000.png) fixed center no-repeat;
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: white;
+    box-shadow: 2px 2px 8px grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    position: fixed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: darkkhaki;
+}

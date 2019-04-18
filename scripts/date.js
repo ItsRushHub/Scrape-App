@@ -1,5 +1,3 @@
-import { model } from "mongoose";
-
 var makeDate = function() {
     var d = new Date();
     var formattedDate = "";
@@ -10,4 +8,4 @@ var makeDate = function() {
     return formattedDate;
 };
 
-model.exports = makeDate;
+module.exports = makeDate;

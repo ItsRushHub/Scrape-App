@@ -14,7 +14,6 @@ var scrape = function (cb) {
             var sum = $(this).children(".p-text").text().trim();
 
             if(head && sum) {
-
                 var dataToAdd = {
                     headline: headNeat,
                     summary: sumNeat

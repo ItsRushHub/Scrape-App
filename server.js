@@ -4,10 +4,6 @@ var mongoose = require("mongoose");
 var expressHandlebars = require("express-handlebars");
 var bodyParser = require("body-parser");
 
-
-// var axios = require("axios");
-// var cheerio = require("cheerio");
-
 // Port to find the app
 var PORT = process.env.PORT || 3000;
 

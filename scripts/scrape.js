@@ -1,6 +1,5 @@
 var request = require("request");
 var cheerio = require("cheerio");
-var axios = require("axios");
 
 
 var scrape = function (cb) {

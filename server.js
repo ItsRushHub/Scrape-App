@@ -1,14 +1,12 @@
 // Set up my dependencies
 var express = require("express");
-var expressHandlebars = require("express-handlebars");
-// var logger = require("morgan");
 var mongoose = require("mongoose");
-var axios = require("axios");
-var cheerio = require("cheerio");
+var expressHandlebars = require("express-handlebars");
 var bodyParser = require("body-parser");
 
-// Require all models
-// var db = require("./models");
+
+// var axios = require("axios");
+// var cheerio = require("cheerio");
 
 // Port to find the app
 var PORT = process.env.PORT || 3000;
@@ -22,8 +20,6 @@ var router = express.Router();
 // Router Config setup
 require("./config/routes") (router);
 
-
-
 // Use the public folder for static info
 app.use(express.static(__dirname + "/public"));
 
@@ -32,6 +28,7 @@ app.engine("handlebars", expressHandlebars ({
 }));
 app.set("view engine", "handlebars");
 
+
 // Parse request body as JSON
 app.use(bodyParser.urlencoded({
     extended: false
@@ -39,6 +36,8 @@ app.use(bodyParser.urlencoded({
 
 app.use(router);
 
+
+// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
 var db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 // Connect the mongoose to the database

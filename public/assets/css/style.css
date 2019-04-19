@@ -22,13 +22,16 @@ h2 {
 }
 
 .btn {
+    display:inline-block;
     background-color:#dc4048;
     color: white;
     border: #dc4048;
+    margin-right: 10px;
 }
 
 .btn:hover {
     background-color:#feb913;
+    border: #feb913;
 }
 
 .jumbotron {

@@ -12,14 +12,16 @@ module.exports = {
                 articles[i].saved = false;
             }
 
-            Headline.collection.insertMany(articles, {ordered:false}, function(err, doca) {
+            Headline.collection.insertMany(articles, {ordered:false}, function(err, docs) {
                 cb(err, docs);
             });
         });
     },
+
     delete: function(query, cb) {
         Headline.remove(query, cb);
     },
+
     get: function(query, cb) {
         Headline.find(query)
         .sort({
@@ -29,10 +31,10 @@ module.exports = {
             cb(doc);
         });
     },
+
     update: function(query, cb) {
         Headline.update({_id: query._id}, {
             $set: query
-        }, {}, cb);
-            
+        }, {}, cb);     
     }
 }

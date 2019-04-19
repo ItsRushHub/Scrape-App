@@ -20,7 +20,7 @@ module.exports = function(router) {
     });
 
     router.get("/api/fetch", function(req, res) {
-        headlinesController.fetch(function(err,docs) {
+        headlinesController.fetch(function(err, docs) {
             if (!docs || docs.insertedCount === 0) {
                 res.json({
                     message: "Sorry, there are no new articles. Check back later."
@@ -33,6 +33,7 @@ module.exports = function(router) {
             }
         });
     });
+    
     router.get("/api/headlines", function(req, res) {
         var query = {};
         if (req.query.saved) {

@@ -1,14 +1,16 @@
 var request = require("request");
-
 var cheerio = require("cheerio");
+var axios = require("axios");
 
 
 var scrape = function (cb) {
 
     request("https://www.usatoday.com", function(err, res, body) {
+        
         var $ = cheerio.load(body);
 
         var articles = [];
+        
         $(".asset.story.clearfix").each(function(i, element) {
             var head = $(this).children(".asset-headline.speakable-headline").text().trim();
             var sum = $(this).children(".p-text").text().trim();

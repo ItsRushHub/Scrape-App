@@ -7,22 +7,25 @@ module.exports = {
             _headlineId: data._id,
         }, cb);
     },
+
     save: function(data, cb) {
         var newNote = {
             _headlineId: data._id,
             date: makeDate(),
             noteText: data.noteText
         };
-       Note.create(newNote, function (err, doc) {
+
+       Note.create(newNote, function (err, docs) {
            if (err) {
                console.log(err);
            }
            else {
-               console.log(doc);
-               cb(doc);
+               console.log(docs);
+               cb(docs);
            }
        });
     },
+    
     delete: function(data, cb) {
         Note.find({
             _id: data._id
